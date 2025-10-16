@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Info Screen - Oslo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dynamic background container -->
+    <div id="background-container"></div>
+
+    <!-- Main container -->
+    <div class="container">
+        <!-- Weather Section with integrated Clock -->
+        <div class="weather-section">
+            <div class="weather-icon" id="weather-icon">
+                <!-- Weather icon will be inserted here -->
+            </div>
+            <div class="weather-info">
+                <div class="temperature" id="temperature">--°</div>
+                <div class="weather-description" id="weather-description">Loading weather...</div>
+                <div class="location" id="location">Oslo, Norway</div>
+            </div>
+            <div class="weather-details">
+                <div class="detail">
+                    <span class="detail-label">Feels like:</span>
+                    <span class="detail-value" id="feels-like">--°</span>
+                </div>
+                <div class="detail">
+                    <span class="detail-label">Wind:</span>
+                    <span class="detail-value" id="wind-speed">--</span>
+                </div>
+                <div class="detail">
+                    <span class="detail-label">Humidity:</span>
+                    <span class="detail-value" id="humidity">--%</span>
+                </div>
+            </div>
+            <div class="last-updated" id="weather-updated">Last updated: --</div>
+
+            <!-- Clock integrated into weather bar -->
+            <div class="clock" id="clock">
+                <div class="clock-time">00:00</div>
+                <div class="clock-date">Loading...</div>
+            </div>
+        </div>
+
+        <!-- News Section -->
+        <div class="news-section">
+            <h2 class="news-header">
+                <span class="news-title">Latest News</span>
+                <span class="news-source">NRK</span>
+            </h2>
+
+            <div class="news-container" id="news-container">
+                <!-- News items will be inserted here -->
+                <div class="news-item skeleton">
+                    <div class="news-item-title skeleton-text"></div>
+                </div>
+                <div class="news-item skeleton">
+                    <div class="news-item-title skeleton-text"></div>
+                </div>
+                <div class="news-item skeleton">
+                    <div class="news-item-title skeleton-text"></div>
+                </div>
+                <div class="news-item skeleton">
+                    <div class="news-item-title skeleton-text"></div>
+                </div>
+                <div class="news-item skeleton">
+                    <div class="news-item-title skeleton-text"></div>
+                </div>
+            </div>
+
+            <!-- Expanded news detail view -->
+            <div class="news-detail" id="news-detail">
+                <!-- Progress bar countdown - Thin red line -->
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="news-detail-content">
+                    <div class="news-detail-image-container">
+                        <img id="news-detail-image" src="" alt="News image">
+                    </div>
+                    <div class="news-detail-text">
+                        <h3 class="news-detail-title" id="news-detail-title"></h3>
+                        <p class="news-detail-description" id="news-detail-description"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="last-updated" id="news-updated">Last updated: --</div>
+        </div>
+    </div>
+
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Fullscreen Button -->
+    <button class="fullscreen-btn" id="fullscreen-btn" aria-label="Toggle Fullscreen">
+        <svg class="fullscreen-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <!-- Expand icon -->
+            <path class="expand-icon" d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+            <!-- Compress icon (hidden by default) -->
+            <path class="compress-icon" style="display: none;" d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/>
+        </svg>
+    </button>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
